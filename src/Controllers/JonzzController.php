@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-use Smarch\Jonzz\Models\Amazo;
+use Smarch\Jonzz\Models\Jonzz;
 use Smarch\Jonzz\Requests\StoreRequest;
 use Smarch\Jonzz\Requests\UpdateRequest;
 
