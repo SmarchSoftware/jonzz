@@ -2,7 +2,7 @@
 
 @section( config('jonzz.section') )
 
-    <h1><i class="fa fa-money fa-fw"></i> {{ config('jonzz.title', 'Jonzz Attributes') }}
+    <h1><i class="fa fa-transgender-alt fa-fw"></i> {{ config('jonzz.title', 'Jonzz Attributes') }}
     <div class="btn-group pull-right" role="group" aria-label="..."> 
       
         <a href="{{ route( config('jonzz.route.as') . 'create') }}">
