@@ -15,8 +15,8 @@ Route::group( [
 				]
 			]
 		);
-		Route::get('lex/orderby/{field}', 'Smarch\Lex\Controllers\CurrencyController@index')->name('orderby');
-		Route::get('lex/{lex}/cumulative', 'Smarch\Lex\Controllers\CurrencyController@showCumulative')->name('cumulative');
-		Route::post('lex/{lex}/cumulative', 'Smarch\Lex\Controllers\CurrencyController@updateCumulative')->name('cumulative');
+		Route::get('jonzz/orderby/{field}', 'Smarch\Jonzz\Controllers\JonzzController@index')->name('orderby');
+		Route::get('jonzz/{jonzz}/cumulative', 'Smarch\Jonzz\Controllers\JonzzController@showCumulative')->name('cumulative');
+		Route::post('jonzz/{jonzz}/cumulative', 'Smarch\Jonzz\Controllers\JonzzController@updateCumulative')->name('cumulative');
 	}
 );

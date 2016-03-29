@@ -8,15 +8,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-use App\Jonzz;
+use Smarch\Jonzz\Models\Amazo;
 use Smarch\Jonzz\Requests\StoreRequest;
 use Smarch\Jonzz\Requests\UpdateRequest;
-use Smarch\Jonzz\Traits\SmarchACLTrait;
+
+use Smarch\Omac\OmacTrait;
 
 class JonzzController extends Controller
 {
 
-    use SmarchACLTrait;
+    use OmacTrait;
 
     var $acl = false;
     var $driver = 'laravel';
