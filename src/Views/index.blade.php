@@ -52,7 +52,7 @@
               @endforelse
             </tbody>
         </table>
-        <div class="pagination"> {!! $jonzz->render() !!} </div>
+        <div class="pagination"> {!! $resources->render() !!} </div>
     </div>
 
 @endsection
