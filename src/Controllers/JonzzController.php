@@ -72,7 +72,7 @@ class JonzzController extends Controller
     public function store(StoreRequest $request)
     {
         if ( $this->checkAccess( config('jonzz.acl.create') ) ) {
-            jonzz::create($request->all());        
+            Jonzz::create($request->all());        
             return redirect()->route('jonzz.index')
                 ->with( ['flash' => ['message' => "<i class='fa fa-check-square-o fa-1x'></i> Success! Jonzz attribute created.", 'level' => "success"] ] );
         }
@@ -91,7 +91,7 @@ class JonzzController extends Controller
     public function show($id)
     {
         if ( $this->checkAccess( config('jonzz.acl.show') ) ) {
-            $resource = jonzz::findOrFail($id);
+            $resource = Jonzz::findOrFail($id);
             $show = "1";
             return view( config('jonzz.views.edit'), compact('resource', 'show') );
         }
@@ -109,7 +109,7 @@ class JonzzController extends Controller
     public function edit($id)
     {
         if ( $this->checkAccess( config('jonzz.acl.edit') ) ) {
-            $resource = jonzz::findOrFail($id);
+            $resource = Jonzz::findOrFail($id);
             $show = "0";
             return view( config('jonzz.views.edit'), compact('resource', 'show') );
         }
@@ -127,7 +127,7 @@ class JonzzController extends Controller
     public function update($id, UpdateRequest $request)
     {
         if ( $this->checkAccess( config('jonzz.acl.edit') ) ) {
-            $jonzz =  jonzz::findOrFail($id);      
+            $jonzz =  Jonzz::findOrFail($id);      
             $jonzz->update($request->all());        
             return redirect()->route('jonzz.index')
                 ->with( ['flash' => ['message' => "<i class='fa fa-check-square-o fa-1x'></i> Success! Jonzz attribute edited.", 'level' => "success"] ] );   
@@ -147,7 +147,7 @@ class JonzzController extends Controller
     public function destroy($id)
     {
         if ( $this->checkAccess( config('jonzz.acl.destroy') ) ) {
-            jonzz::destroy($id);
+            Jonzz::destroy($id);
             return redirect()->route('jonzz.index')
                 ->with( ['flash' => ['message' => "<i class='fa fa-check-square-o fa-1x'></i> Success! Jonzz attribute deleted.", 'level' => "warning"] ] );
         }

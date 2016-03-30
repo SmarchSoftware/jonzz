@@ -14,8 +14,9 @@ class CreateJonzzTable extends Migration
     {        
         Schema::create('jonzz', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('value');
+            $table->string('name')->length(255)->required();
+            $table->string('slug')->length(32)->required();
+            $table->integer('value')->default('0')->required();
             $table->text('notes');
             $table->timestamps();
         });            
