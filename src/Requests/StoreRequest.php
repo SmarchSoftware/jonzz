@@ -28,6 +28,7 @@ class StoreRequest extends Request
        return [
             'name' => 'required|unique:jonzz|max:255|min:4',
             'slug' => 'required|unique:jonzz|max:32|min:4',
+            'value' => 'required|numeric',
             'notes' => 'string|max:255|min:2'
         ];
     }

@@ -12,7 +12,7 @@ class CreateJonzzTable extends Migration
      */
     public function up()
     {        
-        Schema::create('jonzz', function(Blueprint $table) {
+        Schema::create('attributes', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name')->length(255)->required();
             $table->string('slug')->length(32)->required();
@@ -29,7 +29,7 @@ class CreateJonzzTable extends Migration
      */
     public function down()
     {
-        Schema::drop('jonzz');
+        Schema::drop('attributes');
     }
 
 }

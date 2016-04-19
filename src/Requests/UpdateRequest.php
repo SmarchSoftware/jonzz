@@ -1,6 +1,6 @@
 <?php
 
-namespace Smarch\Amazo\Requests;
+namespace Smarch\Jonzz\Requests;
 
 use App\Http\Requests\Request;
 
@@ -25,9 +25,9 @@ class UpdateRequest extends Request
     public function rules()
     {
         return [
-            'slug' => 'required|unique:damage_types,slug,'.$this->get('id').'|max:255|min:4',
-            'name' => 'required|unique:damage_types,name,'.$this->get('id').'|max:32|min:4',
-            'enabled' => 'required|boolean',
+            'slug' => 'required|unique:jonzz,slug,'.$this->get('id').'|max:255|min:4',
+            'name' => 'required|unique:jonzz,name,'.$this->get('id').'|max:32|min:4',
+            'value' => 'required|numeric',
             'notes' => 'string|max:255|min:2'
         ];
 

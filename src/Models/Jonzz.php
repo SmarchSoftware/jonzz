@@ -12,7 +12,7 @@ class Jonzz extends Model
      *
      * @var string
      */
-    protected $table = 'jonzz';
+    protected $table = 'attributes';
 
     /**
      * Jonzz Attributes that should be mass-assignable.
