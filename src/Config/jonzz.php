@@ -138,4 +138,15 @@ return [
         'middleware'=> (str_contains( app()->version(), '5.2') ? ['web'] : ['auth'])
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Implementation options
+    |--------------------------------------------------------------------------
+    |
+    | The name of the table Jonzz uses
+    |
+    */ 
+    'table' => 'attributes',
+
 ];

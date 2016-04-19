@@ -5,6 +5,12 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateJonzzTable extends Migration
 {
+    private $table;
+
+    public function __construct()
+    {
+        $this->table = config('jonzz.table', 'attributes');
+    }
     /**
      * Run the migrations.
      *
@@ -12,7 +18,7 @@ class CreateJonzzTable extends Migration
      */
     public function up()
     {        
-        Schema::create('attributes', function(Blueprint $table) {
+        Schema::create($this->table, function(Blueprint $table) {
             $table->increments('id');
             $table->string('name')->length(255)->required();
             $table->string('slug')->length(32)->required();
@@ -29,7 +35,7 @@ class CreateJonzzTable extends Migration
      */
     public function down()
     {
-        Schema::drop('attributes');
+        Schema::drop($this->table);
     }
 
 }

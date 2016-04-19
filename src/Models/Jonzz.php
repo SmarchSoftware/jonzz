@@ -19,6 +19,6 @@ class Jonzz extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'value', 'notes'];
+    protected $fillable = ['name', 'slug', 'value', 'notes'];
 
 }

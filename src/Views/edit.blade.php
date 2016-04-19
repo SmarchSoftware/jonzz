@@ -44,6 +44,7 @@
            @if ($show == '0')
             {!! Form::submit('Edit', ['class' => 'btn btn-primary form-control']) !!}
             </div>
+            {!! Form::close() !!}
 
             <div class="col-sm-offset-2 col-sm-3">
             {!! Form::open(['method'=>'delete','route'=> [ config('jonzz.route.as') . 'destroy',$resource->id] ]) !!}
