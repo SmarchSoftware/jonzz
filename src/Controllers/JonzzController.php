@@ -72,7 +72,10 @@ class JonzzController extends Controller
     public function store(StoreRequest $request)
     {
         if ( $this->checkAccess( config('jonzz.acl.create') ) ) {
-            Jonzz::create($request->all());        
+            $model = New Jonzz;
+            $model->setTable( config('jonzz.table') );
+            $model->fill( $request->all() );
+            $model->save();
             return redirect()->route('jonzz.index')
                 ->with( ['flash' => ['message' => "<i class='fa fa-check-square-o fa-1x'></i> Success! Jonzz attribute created.", 'level' => "success"] ] );
         }

@@ -7,14 +7,16 @@ use App\Http\Requests\Request;
 class StoreRequest extends Request
 {
     private $table;
-
+    
+    /*
+     * constructor to set table
+     */
     public function __construct()
     {
         $this->table = config('jonzz.table', 'attributes');
     }
 
     /**
-     * 
      * Determine if the user is authorized to make this request.
      *
      * @return bool
@@ -31,11 +33,13 @@ class StoreRequest extends Request
      */
     public function rules()
     {
-       return [
-            'name' => 'required|unique:'.$this->table.',name|max:255|min:4',
-            'slug' => 'required|unique:'.$this->table.',slug|max:32|min:4',
+        return [
+            'name' => 'required|unique:'.$this->table.'|max:32|min:4',
+            'slug' => 'required|unique:'.$this->table.'|max:255|min:4',
             'value' => 'required|numeric',
             'notes' => 'string|max:255|min:2'
         ];
+
     }
+
 }
