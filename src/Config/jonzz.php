@@ -147,6 +147,6 @@ return [
     | The name of the table Jonzz uses
     |
     */ 
-    'table' => 'jonzz',
+    'table' => 'attributes',
 
 ];
