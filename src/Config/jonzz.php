@@ -94,7 +94,7 @@ return [
    'acl' => [
         'enable'    => false,
         'driver'    => 'laravel',
-        'index'     => 'jonzz.index',            
+        'index'     => 'jonzz.index',
         'create'    => 'jonzz.create',
         'show'      => 'jonzz.show',
         'edit'      => 'jonzz.edit',
